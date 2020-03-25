@@ -1,16 +1,16 @@
-%Monte Carlo Simulation to calculate the fraction of two end-members
+% Monte Carlo Simulation to calculate the respective fractions of two end-members.
 
+% This matlab code performs the simulation of mixing results between two end members.
+% For each run, it simulates the isotopic composition of two end members and mixes them together by their random fractions.
+% Then it compares the isotopic compositions of the modeled mixed sample with the isotopic compositions of the measured sample.
 
-% This matlab code performs the simulation of mixing results between 2  end members
-% For each run it simulates the isotopic composition of two end members and mixes them together by a random fraction
-% then it compares the isotopic composition of the modeled mixed sample with the isotopic composition of a measured sample
 clear all
 
 S={'d1','d2', 'f1','f2','d_mix'};
 
 km1=1;
 
-inputfile = fopen('Binarymodel_fraction_cal.xls','w');
+inputfile = fopen('Binarymodel_fraction_cal.xls','w'); %creat an excel file for saving the output data.  
 
 formatSpec = '%s\t';
 
@@ -32,7 +32,7 @@ for i=1:10000  % pseudorandom number generation
    
     
     d1 = 3.84 + randn*1.15 ; %isotope signature of end-member 1 
-    d2 = 0.16 +randn*0.09;   %isotope signature of  end-member 2
+    d2 = 0.16 +randn*0.09;   %isotope signature of end-member 2
         
     f1= rand; % fraction of end-member 1, relative to sample
     f2= 1-f1; % fraction of end-member 2, relative to sample
