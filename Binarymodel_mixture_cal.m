@@ -1,7 +1,7 @@
-%Monte Carlo Simulation to calculate the mixed isotope signatures of two end-members
+%Monte Carlo Simulation to calculate the mixed isotope signatures of two end-members.
 
-% This matlab code performs the simulation of mixing results between 2 (or several) end members. 
-% For each run it simulates the fractions of two end members and mixed the isotope compositons of two end members.
+% This matlab code performs the simulation of mixing results for 2 (or several) end members. 
+% For each run, it simulates the fractions and isotope compositons of two end members, and mixed the two end members to get mixed values.
 
 clear all
 
@@ -9,7 +9,7 @@ S={'d1','d2', 'f1','f2','d_mix'};
 
 km1=1;
 
-inputfile = fopen('Binarymodel_mixture_cal.xls','w');
+inputfile = fopen('Binarymodel_mixture_cal.xls','w'); %creat an excel file for output
 
 formatSpec = '%s\t';
 
